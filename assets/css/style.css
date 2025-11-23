@@ -322,12 +322,12 @@ body {
 }
 
 /* The picture inside */
-/* .about-photo-circle img {
-    width: 100%;
-    height: 25%;
-    /* border-radius: 50%; */
-    /* object-fit: cover;
-} */ 
+.about-photo-circle img {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 
 

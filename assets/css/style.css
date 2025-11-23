@@ -369,6 +369,13 @@ body {
     background: #0954c5;
 }
 
+.about-btn {
+    padding: 6px 16px;        /* plus petit */
+    font-size: 0.8rem;        /* texte réduit */
+    border-radius: 20px;      /* bouton plus discret */
+}
+
+
 /* ========== TECHNICAL SKILLS ========== */
 .skills-list {
     border-radius: 12px;
@@ -792,8 +799,8 @@ body {
     }
 
     .profile-gradient-about {
-        width: 220px;
-        height: 220px;
+        width: 300px;
+        height: 300px;
     }
 }
 

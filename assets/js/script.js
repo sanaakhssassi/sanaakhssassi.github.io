@@ -101,6 +101,35 @@ if (typingSpan) {
     }
 }
 
+/* ===================== PROJECT FILTERS ===================== */
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+
+        // Add active class to the clicked button
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+
+        projectCards.forEach(card => {
+            const category = card.dataset.category;
+
+            if (filter === "all" || category === filter) {
+                card.classList.remove("hidden");
+            } else {
+                card.classList.add("hidden");
+            }
+        });
+    });
+});
+
+
 // ===== YEAR IN FOOTER =====
 const yearSpan = document.getElementById("year");
 if (yearSpan) {

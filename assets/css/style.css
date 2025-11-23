@@ -334,6 +334,7 @@ body {
 .about-photo-circle img {
     width: 50%;
     height: 50%;
+    object-fit: contain;      /* Ensures perfect crop */
 }
 
 

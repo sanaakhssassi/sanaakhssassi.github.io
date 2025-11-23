@@ -300,10 +300,10 @@ body {
     align-items: center;
 }
 
-/* .about-photo-wrapper {
+.about-photo-wrapper {
     display: flex;
     justify-content: center;
-} */
+}
 
 /* We'll reuse the same gradient style but larger for About */
 /* .profile-gradient-about {
@@ -312,28 +312,28 @@ body {
 } */
 
 /* ========== ABOUT PHOTO EXACT DEEPANSHU STYLE ========== */
-.about-photo-wrapper {
+/* .about-photo-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* Clean circle  */
-.about-photo-circle {
+/* .about-photo-circle {
     width: 310px;              /* Bigger — matches screenshot */
-    height: 310px;
+    /* height: 310px;
     border-radius: 50%;
     overflow: hidden;          /* Makes the image perfectly round */
-    background: #f4f4f4;       /* Light grey background behind the picture */
-    display: flex;
+    /* background: #f4f4f4;       Light grey background behind the picture */ */
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-}
+    align-items: center; */
+/* }  
 
 /* The picture itself */
 .about-photo-circle img {
-    width: 100%;
-    height: 100%;
+    width: 85%;
+    height: 85%;
     object-fit: cover;        /* Ensures perfect crop */
 }
 

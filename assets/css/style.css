@@ -323,8 +323,8 @@ body {
 
 /* The picture inside */
 .about-photo-circle img {
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     border-radius: 50%;
     object-fit: cover;
 }

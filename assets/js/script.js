@@ -1,11 +1,22 @@
-// Year in footer
-const yearSpan = document.getElementById("year");
-if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
+// ===== MOBILE NAV TOGGLE =====
+const navToggle = document.getElementById("navToggle");
+const nav = document.getElementById("mainNav");
+
+if (navToggle && nav) {
+    navToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+
+    // Close menu when a link is clicked (on mobile)
+    nav.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", () => nav.classList.remove("open"));
+    });
 }
 
-// Smooth scroll for sidebar nav
+// ===== SMOOTH SCROLL + ACTIVE LINK =====
 const navLinks = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll("main section");
+
 navLinks.forEach(link => {
     link.addEventListener("click", e => {
         const href = link.getAttribute("href");
@@ -19,14 +30,12 @@ navLinks.forEach(link => {
     });
 });
 
-// Highlight active nav on scroll
-const sections = document.querySelectorAll("main .section");
-function updateActiveLink() {
+function updateActiveNav() {
     let currentId = "";
-    sections.forEach(sec => {
-        const rect = sec.getBoundingClientRect();
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
         if (rect.top <= 120 && rect.bottom >= 120) {
-            currentId = "#" + sec.id;
+            currentId = "#" + section.id;
         }
     });
 
@@ -34,10 +43,11 @@ function updateActiveLink() {
         link.classList.toggle("active", link.getAttribute("href") === currentId);
     });
 }
-window.addEventListener("scroll", updateActiveLink);
-updateActiveLink();
 
-// Scroll-to-top button
+window.addEventListener("scroll", updateActiveNav);
+updateActiveNav();
+
+// ===== SCROLL TO TOP BUTTON =====
 const scrollBtn = document.getElementById("scrollToTop");
 window.addEventListener("scroll", () => {
     if (!scrollBtn) return;
@@ -47,24 +57,26 @@ window.addEventListener("scroll", () => {
         scrollBtn.classList.remove("show");
     }
 });
+
 if (scrollBtn) {
-    scrollBtn.addEventListener("click", () =>
-        window.scrollTo({ top: 0, behavior: "smooth" })
-    );
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 }
 
-// Typing effect: "Open to work as ..."
-const heroTypingSpan = document.querySelector(".hero-typing");
-if (heroTypingSpan) {
-    const texts = JSON.parse(heroTypingSpan.getAttribute("data-text") || "[]");
+// ===== TYPING EFFECT IN HERO =====
+const typingSpan = document.querySelector(".typing");
+
+if (typingSpan) {
+    const texts = JSON.parse(typingSpan.getAttribute("data-text") || "[]");
     let wordIndex = 0;
     let charIndex = 0;
     let deleting = false;
 
     function type() {
         const currentWord = texts[wordIndex] || "";
-        const visible = currentWord.substring(0, charIndex);
-        heroTypingSpan.textContent = visible;
+        const visibleText = currentWord.substring(0, charIndex);
+        typingSpan.textContent = visibleText;
 
         if (!deleting && charIndex < currentWord.length) {
             charIndex++;
@@ -80,9 +92,34 @@ if (heroTypingSpan) {
                 wordIndex = (wordIndex + 1) % texts.length;
             }
         }
+
         const speed = deleting ? 60 : 120;
         setTimeout(type, speed);
     }
 
-    if (texts.length) type();
+    if (texts.length > 0) {
+        type();
+    }
 }
+
+// ===== PROJECT FILTERS =====
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter");
+
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        projectCards.forEach(card => {
+            const category = card.getAttribute("data-category");
+            if (filter === "all" || filter === category) {
+                card.classList.remove("hidden");
+            } else {
+                card.classList.add("hidden");
+            }
+        });
+    });
+});

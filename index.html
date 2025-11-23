@@ -3,305 +3,396 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akhssassi Sana | Data Analyst</title>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Your Name | Data Analyst Portfolio</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         referrerpolicy="no-referrer"
     />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    <!-- ============ SIDEBAR ============ -->
-    <aside class="sidebar">
-        <div class="sidebar-top">
-            <div class="sidebar-profile">
-                <div class="profile-photo-wrapper">
-                    <div class="profile-photo-circle">
-                        <img src="assets/img/profile.jpg" alt="Profile" />
-                    </div>
-                </div>
-                <h1 class="sidebar-name">Akhssassi Sana</h1>
-                <p class="sidebar-role">Data Analyst</p>
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">Your<span>Portfolio</span></div>
 
-                <div class="sidebar-socials">
-                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:sanaakhsassi@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="tel:+212697092872" aria-label="Phone">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                </div>
-
-                <a href="assets/cv/CV_Akhssassi_Sana_Data_Analyst.pdf" class="sidebar-btn" target="_blank">
-                    <i class="fas fa-download"></i>
-                    <span>Download CV</span>
-                </a>
-            </div>
-
-            <nav class="sidebar-nav">
-                <a href="#home" class="nav-link active">
-                    <i class="fas fa-house"></i><span>Home</span>
-                </a>
-                <a href="#about" class="nav-link">
-                    <i class="fas fa-user"></i><span>About Me</span>
-                </a>
-                <a href="#experience" class="nav-link">
-                    <i class="fas fa-briefcase"></i><span>Work Experience & Education</span>
-                </a>
-                <a href="#certifications" class="nav-link">
-                    <i class="fas fa-gear"></i><span>Certifications</span>
-                </a>
-                <a href="#projects" class="nav-link">
-                    <i class="fas fa-folder-open"></i><span>Projects</span>
-                </a>
-                <a href="#contact" class="nav-link">
-                    <i class="fas fa-envelope-open-text"></i><span>Contact</span>
-                </a>
+            <nav class="nav" id="mainNav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#skills" class="nav-link">Technical Skills</a>
+                <a href="#experience" class="nav-link">Work Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
+    </header>
 
-        <footer class="sidebar-footer">
-            <small>© <span id="year"></span> <strong>Akhssassi Sana</strong></small>
-        </footer>
-    </aside>
-
-    <!-- ============ MAIN CONTENT ============ -->
-    <main class="main">
-
-        <!-- ===== HERO ===== -->
+    <!-- ================= MAIN ================= -->
+    <main>
+        <!-- ===== HOME / HERO ===== -->
         <section id="home" class="section hero">
             <div class="hero-bg"></div>
 
-            <div class="hero-content">
-                <h1 class="hero-name">Akhssassi Sana</h1>
+            <div class="container hero-inner">
+                <h1 class="hero-title">Your Name</h1>
 
                 <hr class="hero-divider" />
 
-                <p class="hero-description">
-                    <strong>Data Analyst</strong> with experience in data cleaning, modeling, automation, and dashboarding.
-                    Skilled in Python, SQL, Power BI, Talend, Tableau and Azure DevOps. Enthusiastic about data-driven
-                    storytelling and continuous learning.
+                <p class="hero-text">
+                    <strong>Data Analyst</strong> with background in analytics and hands-on experience in
+                    Python, SQL and data visualization. Comfortable turning raw datasets into clear stories
+                    and dashboards that support decision-making.
                 </p>
 
                 <hr class="hero-divider" />
 
-                <p class="hero-open">
+                <p class="hero-subline">
                     Open to work as a
-                    <span class="hero-typing" data-text='["Data Analyst","Business Analyst","BI Analyst"]'></span>
+                    <span class="typing" data-text='["Data Analyst","Business Analyst","BI Analyst"]'></span>
                 </p>
 
-                <button class="hero-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-                    Contact Me
+                <button class="btn btn-primary hero-btn">
+                    Download Resume
                 </button>
             </div>
         </section>
 
-        <!-- ===== ABOUT ===== -->
-        <section id="about" class="section">
-            <h2 class="section-title">About Me</h2>
-            <div class="section-line"></div>
+        <!-- ===== ABOUT ME ===== -->
+        <section id="about" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-underline"></div>
 
-            <p class="section-text">
-                I am a Data Analyst with strong experience analyzing, processing, and modeling data from multiple sources.
-                I enjoy building efficient data pipelines, designing dashboards, and working with teams to translate
-                business questions into analytical solutions.
-            </p>
-            <p class="section-text">
-                I have worked with Python, SQL, Power BI, Talend, Tableau, Docker and Azure DevOps, on projects involving
-                automation, reporting, and decision support. I am always keen to improve my skills and explore new tools
-                in data and AI.
-            </p>
-        </section>
-
-        <!-- ===== EXPERIENCE & EDUCATION ===== -->
-        <section id="experience" class="section">
-            <h2 class="section-title">Work Experience & Education</h2>
-            <div class="section-line"></div>
-
-            <div class="two-columns">
-                <!-- Experience -->
-                <div class="timeline-column">
-                    <h3 class="column-title">Work Experience</h3>
-
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">Nov 2022 – Present</span>
-                                <h4>Data Analyst – Kavaa Global Services (Rabat)</h4>
-                                <ul>
-                                    <li>Collect, clean & analyze data from multiple sources.</li>
-                                    <li>Create Power BI dashboards & automate ETL workflows.</li>
-                                    <li>Build and optimize Python data pipelines.</li>
-                                    <li>Write SQL queries to extract actionable insights.</li>
-                                    <li>Automate requirement management workflows.</li>
-                                    <li>Support and train interns on data topics.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">Jul 2022 – Nov 2022</span>
-                                <h4>Data Analyst – ENSA Khouribga</h4>
-                                <p>Designed and implemented ETL pipelines for data collection and transformation.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">Feb 2022 – Jun 2022</span>
-                                <h4>Data Scientist – ENSA Khouribga</h4>
-                                <p>GAN project for image-to-image translation using Python and deep learning.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">Mar 2020 – May 2020</span>
-                                <h4>Data Analyst – TACMED SYSTEM (Agadir)</h4>
-                                <p>Data exploration, analysis & visualization using Pandas, Matplotlib and Seaborn.</p>
-                            </div>
+                <div class="about-grid">
+                    <!-- Left: Picture -->
+                    <div class="about-photo-wrapper">
+                        <div class="about-photo-circle">
+                            <img src="assets/img/profile.jpg" alt="Profile photo" />
                         </div>
                     </div>
-                </div>
 
-                <!-- Education -->
-                <div class="timeline-column">
-                    <h3 class="column-title">Education</h3>
+                    <!-- Right: Text -->
+                    <div class="about-content">
+                        <h3 class="about-heading">Data Analyst</h3>
+                        <p class="about-subheading">
+                            Hey there, I’m <span class="emphasis">Your Name</span>, a data enthusiast with interest
+                            in ETL, Data Analysis, and Visualization.
+                        </p>
 
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2020 – 2022</span>
-                                <h4>Master – Big Data & Aide à la Décision</h4>
-                                <p>ENSA Khouribga</p>
+                        <p class="about-text">
+                            Coming from a quantitative / technical background, I enjoy working end-to-end:
+                            cleaning data, creating models, and building reports that answer real business questions.
+                            I like working with tools such as Python, SQL, Power BI and Excel to create impactful insights.
+                        </p>
+
+                        <p class="about-text">
+                            I’m always looking for new challenges and opportunities to improve my skills and contribute
+                            to data-driven projects.
+                        </p>
+
+                        <div class="about-actions">
+                            <div class="about-socials">
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="mailto:youremail@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                <a href="#" aria-label="Phone"><i class="fas fa-phone"></i></a>
                             </div>
-                        </div>
 
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2019 – 2020</span>
-                                <h4>Licence Professionnelle – Métiers de l’Informatique</h4>
-                                <p>EST Safi</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2017 – 2019</span>
-                                <h4>DUT – Génie Informatique</h4>
-                                <p>EST Agadir</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2016 – 2017</span>
-                                <h4>Baccalauréat – Sciences Physiques</h4>
-                                <p>Lycée Al Joulan – Agadir</p>
-                            </div>
+                            <button class="btn btn-primary about-btn">
+                                Download Resume
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== CERTIFICATIONS ===== -->
-        <section id="certifications" class="section">
-            <h2 class="section-title">Certifications</h2>
-            <div class="section-line"></div>
+        <!-- ===== TECHNICAL SKILLS ===== -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-underline"></div>
 
-            <ul class="list">
-                <li>Udemy – Data Analysis Using Python</li>
-                <li>Udemy – Pentaho for ETL</li>
-                <li>IBM – Simplifying Data Pipelines with Kafka</li>
-                <li>Simplilearn – Power BI for Beginners</li>
-                <li>IBM – Python 101 for Data Science</li>
-            </ul>
+                <div class="skills-list">
+                    <!-- Skill row 1 -->
+                    <div class="skill-row">
+                        <div class="skill-icon">
+                            <!-- Optional: <img src="assets/img/powerbi.png" alt="Power BI" /> -->
+                            <span class="skill-icon-placeholder">PB</span>
+                        </div>
+                        <div class="skill-text">
+                            <p>
+                                <strong>Power BI:</strong> Data modelling, dashboards, visualizations, calculations,
+                                and interactive reports for business users.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Skill row 2 -->
+                    <div class="skill-row">
+                        <div class="skill-icon">
+                            <span class="skill-icon-placeholder">SQL</span>
+                        </div>
+                        <div class="skill-text">
+                            <p>
+                                <strong>SQL / Databases:</strong> Writing queries (DDL, DML, joins, aggregations),
+                                creating views, and exploring relational datasets for analysis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Skill row 3 -->
+                    <div class="skill-row">
+                        <div class="skill-icon">
+                            <span class="skill-icon-placeholder">Py</span>
+                        </div>
+                        <div class="skill-text">
+                            <p>
+                                <strong>Python:</strong> Data analysis with Pandas, NumPy and Matplotlib/Seaborn,
+                                basic statistics and scripting to automate data workflows.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Extra tools row (icons only) -->
+                    <div class="skill-tools">
+                        <span class="tool-pill">Excel</span>
+                        <span class="tool-pill">Git</span>
+                        <span class="tool-pill">VS Code</span>
+                        <span class="tool-pill">PowerPoint</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WORK EXPERIENCE & EDUCATION ===== -->
+        <section id="experience" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Work Experience & Education</h2>
+                <div class="section-underline"></div>
+
+                <div class="exp-grid">
+                    <!-- Left column: Experience -->
+                    <div class="exp-column">
+                        <h3 class="exp-heading">Professional Experience</h3>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-role">DATA ANALYST INTERN</h4>
+                                    <div class="timeline-badge">July 2024 – Present</div>
+                                    <p class="timeline-location">Remote</p>
+                                    <ul>
+                                        <li>Documented problem statements using a structured framework.</li>
+                                        <li>Cleaned and standardized survey data for analysis.</li>
+                                        <li>Analyzed data using SQL, Excel and charts to visualize results.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Add more experience items if you want -->
+                        </div>
+                    </div>
+
+                    <!-- Right column: Education -->
+                    <div class="exp-column">
+                        <h3 class="exp-heading">Education</h3>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-role">MASTER OF SCIENCE – MATHEMATICS</h4>
+                                    <div class="timeline-badge">2021 – 2023</div>
+                                    <p class="timeline-location">Your University Name</p>
+                                    <p class="timeline-note">CGPA: 8.25 / 10</p>
+                                    <ul>
+                                        <li>Operations Research</li>
+                                        <li>Statistical Modeling</li>
+                                        <li>Advanced Mathematics</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-role">BACHELOR OF SCIENCE</h4>
+                                    <div class="timeline-badge">2018 – 2021</div>
+                                    <p class="timeline-location">Your University Name</p>
+                                    <p class="timeline-note">CGPA: 8.38 / 10</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /exp-grid -->
+            </div>
         </section>
 
         <!-- ===== PROJECTS ===== -->
         <section id="projects" class="section">
-            <h2 class="section-title">Projects</h2>
-            <div class="section-line"></div>
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-underline"></div>
 
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>Sales Performance Dashboard</h3>
-                    <p>Interactive Power BI dashboard analyzing sales, revenue and trends across regions with dynamic filters.</p>
-                    <p class="project-tags">Power BI • SQL • Excel</p>
-                </article>
+                <p class="section-intro">
+                    I invite you to go through my projects across different domains using various tools.
+                    <br />
+                    <span class="section-intro-alt">
+                        Hover and click the link icon to explore more about a particular project.
+                    </span>
+                </p>
 
-                <article class="project-card">
-                    <h3>Customer Churn Analysis</h3>
-                    <p>Exploratory data analysis and modeling to understand key drivers of churn for a telecom dataset.</p>
-                    <p class="project-tags">Python • Pandas • Machine Learning</p>
-                </article>
+                <!-- Main "featured" project area (you can replace images later) -->
+                <div class="featured-project">
+                    <div class="featured-image">
+                        <!-- Put a real screenshot here later -->
+                        <div class="featured-placeholder">Main Dashboard Screenshot</div>
+                    </div>
+                    <div class="featured-info">
+                        <h3>Interactive Power BI Dashboard</h3>
+                        <p>
+                            End-to-end dashboard built in Power BI with multiple pages, filters and KPIs for
+                            sales performance tracking.
+                        </p>
+                        <a href="#" class="project-link"><i class="fas fa-link"></i> View Project</a>
+                    </div>
+                </div>
 
-                <article class="project-card">
-                    <h3>Requirements Automation Tool</h3>
-                    <p>Python tool to automate the management and tracking of project requirements for data projects.</p>
-                    <p class="project-tags">Python • Automation</p>
-                </article>
+                <!-- Filter buttons -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="powerbi">Power BI</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="sql">SQL</button>
+                    <button class="filter-btn" data-filter="excel">Excel</button>
+                </div>
+
+                <!-- Thumbnails grid -->
+                <div class="projects-grid">
+                    <div class="project-card" data-category="powerbi">
+                        <div class="project-thumb">Power BI</div>
+                        <h4>Retail Orders Analysis</h4>
+                    </div>
+
+                    <div class="project-card" data-category="powerbi">
+                        <div class="project-thumb">Power BI</div>
+                        <h4>HR Attrition Dashboard</h4>
+                    </div>
+
+                    <div class="project-card" data-category="python">
+                        <div class="project-thumb">Python</div>
+                        <h4>Customer Churn Analysis</h4>
+                    </div>
+
+                    <div class="project-card" data-category="sql">
+                        <div class="project-thumb">SQL</div>
+                        <h4>SQL Case Study</h4>
+                    </div>
+
+                    <div class="project-card" data-category="excel">
+                        <div class="project-thumb">Excel</div>
+                        <h4>Sales Tracking Template</h4>
+                    </div>
+
+                    <div class="project-card" data-category="python">
+                        <div class="project-thumb">Python</div>
+                        <h4>Web Scraping & Reporting</h4>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- ===== CONTACT ===== -->
-        <section id="contact" class="section">
-            <h2 class="section-title">Contact</h2>
-            <div class="section-line"></div>
+        <section id="contact" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-underline"></div>
 
-            <p class="section-text">
-                Interested in working together or discussing a project? Feel free to reach out!
-            </p>
+                <p class="section-intro">
+                    Please contact me in case of any query or job recruitment.
+                </p>
 
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:sanaakhsassi@gmail.com">sanaakhsassi@gmail.com</a></p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+212697092872">+212 6 97 09 28 72</a></p>
-                    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com" target="_blank">GitHub</a></p>
-                </div>
+                <div class="contact-grid">
+                    <!-- Left: contact info + map -->
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h4>Email:</h4>
+                            <p><i class="fas fa-envelope"></i> youremail@example.com</p>
+                        </div>
 
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a static site. You can connect this form to Formspree or EmailJS.');">
-                    <div class="form-row">
-                        <input type="text" placeholder="Your Name" required />
-                        <input type="email" placeholder="Your Email" required />
+                        <div class="contact-item">
+                            <h4>Call:</h4>
+                            <p><i class="fas fa-phone"></i> +00 000 000000</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>LinkedIn:</h4>
+                            <p><i class="fab fa-linkedin"></i> linkedin.com/in/yourprofile</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>Location:</h4>
+                            <p><i class="fas fa-location-dot"></i> Your City</p>
+                        </div>
+
+                        <!-- Map placeholder (you can replace with a real Google Maps embed) -->
+                        <div class="map-placeholder">
+                            Map Placeholder
+                        </div>
                     </div>
-                    <input type="text" placeholder="Subject" required />
-                    <textarea rows="4" placeholder="Message" required></textarea>
-                    <button type="submit" class="hero-btn small">Send Message</button>
-                </form>
+
+                    <!-- Right: form -->
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Static demo – connect this form to Formspree or EmailJS.');">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Your Email</label>
+                                <input type="email" required />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary contact-btn">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <button id="scrollToTop" class="scroll-top">
+    <!-- Scroll to top button -->
+    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Main JS -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>

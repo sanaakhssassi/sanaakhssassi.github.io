@@ -306,12 +306,12 @@ body {
 }
 
 /* We'll reuse the same gradient style but larger for About */
-.profile-gradient-about {
+/* .profile-gradient-about {
     width: 380px;
     height: 380px;
-}
+} */
 
-.profile-gradient-about img {
+.profile-gradient-about {
     width: 90%;
     height: 90%;
     object-fit: cover;

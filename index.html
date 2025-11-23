@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akhssassi Sana | Portfolio</title>
+    <title>Akhssassi Sana | Data Analyst</title>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- Google Fonts -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- Font Awesome Icons -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        crossorigin="anonymous"
         referrerpolicy="no-referrer"
     />
 </head>
-<body style="background:#F2F2F5;"> <!-- LIGHT WARM GRAY BACKGROUND -->
-
-    <!-- ====== Fixed Sidebar ====== -->
+<body>
+    <!-- ============ SIDEBAR ============ -->
     <aside class="sidebar">
-        <div class="sidebar-inner">
-            <div class="profile-block">
-                <div class="profile-img-wrapper">
-                    <img src="assets/img/profile.jpg" alt="Profile" class="profile-img" />
+        <div class="sidebar-top">
+            <div class="sidebar-profile">
+                <div class="profile-photo-wrapper">
+                    <div class="profile-photo-circle">
+                        <img src="assets/img/profile.jpg" alt="Profile" />
+                    </div>
                 </div>
+                <h1 class="sidebar-name">Akhssassi Sana</h1>
+                <p class="sidebar-role">Data Analyst</p>
 
-                <!-- UPDATED NAME + ROLE -->
-                <h1 class="profile-name">Akhssassi Sana</h1>
-                <p class="profile-role">Data Analyst</p>
-
-                <div class="profile-socials">
+                <div class="sidebar-socials">
                     <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
@@ -43,398 +41,267 @@
                     <a href="mailto:sanaakhsassi@gmail.com" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
+                    <a href="tel:+212697092872" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
                 </div>
 
-                <a href="assets/cv/CV_Akhssassi_Sana_Data_Analyst.pdf" class="btn btn-small" target="_blank">
-                    <i class="fas fa-download"></i> Download CV
+                <a href="assets/cv/CV_Akhssassi_Sana_Data_Analyst.pdf" class="sidebar-btn" target="_blank">
+                    <i class="fas fa-download"></i>
+                    <span>Download CV</span>
                 </a>
             </div>
 
-            <nav class="nav">
-                <ul>
-                    <li><a href="#home" class="nav-link active"><i class="fas fa-house"></i> <span>Home</span></a></li>
-                    <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> <span>About</span></a></li>
-                    <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> <span>Skills</span></a></li>
-                    <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> <span>Experience</span></a></li>
-                    <li><a href="#projects" class="nav-link"><i class="fas fa-folder-open"></i> <span>Projects</span></a></li>
-                    <li><a href="#contact" class="nav-link"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
-                </ul>
+            <nav class="sidebar-nav">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-house"></i><span>Home</span>
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user"></i><span>About Me</span>
+                </a>
+                <a href="#experience" class="nav-link">
+                    <i class="fas fa-briefcase"></i><span>Work Experience & Education</span>
+                </a>
+                <a href="#certifications" class="nav-link">
+                    <i class="fas fa-gear"></i><span>Certifications</span>
+                </a>
+                <a href="#projects" class="nav-link">
+                    <i class="fas fa-folder-open"></i><span>Projects</span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <i class="fas fa-envelope-open-text"></i><span>Contact</span>
+                </a>
             </nav>
-
-            <footer class="sidebar-footer">
-                <small>© <span id="year"></span> Akhssassi Sana</small>
-            </footer>
         </div>
 
-        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
+        <footer class="sidebar-footer">
+            <small>© <span id="year"></span> <strong>Akhssassi Sana</strong></small>
+        </footer>
     </aside>
 
-
-    <!-- ====== Main Content ====== -->
+    <!-- ============ MAIN CONTENT ============ -->
     <main class="main">
 
-        <!-- ================= HERO SECTION (UPDATED) ================= -->
-        <section id="home" class="section hero-section">
+        <!-- ===== HERO ===== -->
+        <section id="home" class="section hero">
             <div class="hero-bg"></div>
 
-            <div class="hero-content reveal">
-                <p class="hero-hello">Hi, I’m</p>
+            <div class="hero-content">
                 <h1 class="hero-name">Akhssassi Sana</h1>
 
-                <p class="hero-title">
-                    <span class="typing" data-text='[
-                        "Data Analyst",
-                        "Python Developer",
-                        "BI Specialist",
-                        "ETL & Data Pipeline Engineer"
-                    ]'></span>
-                </p>
+                <hr class="hero-divider" />
 
                 <p class="hero-description">
-                    Passionate Data Analyst with experience in data cleaning, modeling, automation, and dashboarding.
-                    Skilled in Python, SQL, Power BI, Talend, Tableau and Azure DevOps. I help organizations transform
-                    raw data into strategic insights.
+                    <strong>Data Analyst</strong> with experience in data cleaning, modeling, automation, and dashboarding.
+                    Skilled in Python, SQL, Power BI, Talend, Tableau and Azure DevOps. Enthusiastic about data-driven
+                    storytelling and continuous learning.
                 </p>
 
-                <div class="hero-actions">
-                    <a href="#projects" class="btn">
-                        View Projects
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        Contact Me
-                    </a>
-                </div>
+                <hr class="hero-divider" />
 
-                <div class="hero-stats">
-                    <div class="stat-item"><h3>+3</h3><p>Years Experience</p></div>
-                    <div class="stat-item"><h3>+10</h3><p>Projects</p></div>
-                    <div class="stat-item"><h3>∞</h3><p>Learning</p></div>
-                </div>
+                <p class="hero-open">
+                    Open to work as a
+                    <span class="hero-typing" data-text='["Data Analyst","Business Analyst","BI Analyst"]'></span>
+                </p>
+
+                <button class="hero-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                    Contact Me
+                </button>
             </div>
         </section>
 
-
-        <!-- ================= ABOUT SECTION (UPDATED) ================= -->
+        <!-- ===== ABOUT ===== -->
         <section id="about" class="section">
-            <div class="section-header reveal">
-                <h2>About Me</h2>
-                <p>Who I am & what I love to do</p>
-            </div>
+            <h2 class="section-title">About Me</h2>
+            <div class="section-line"></div>
 
-            <div class="about-grid">
-                <div class="about-text reveal">
-
-                    <p>
-                        I am a Data Analyst with strong experience analyzing, processing, and modeling data from multiple
-                        sources. Skilled in Python, SQL, ETL, Power BI, Tableau, and data visualization. I love transforming
-                        raw data into clear insights to support decision-making.
-                    </p>
-
-                    <p>
-                        At Kavaa Global Services, I worked on automating data pipelines, performing BI analysis, mentoring
-                        interns, and collaborating with teams to build robust data solutions.
-                    </p>
-
-                    <div class="about-highlights">
-                        <div class="highlight-item"><i class="fas fa-database"></i><span>ETL & Data Pipelines</span></div>
-                        <div class="highlight-item"><i class="fas fa-chart-line"></i><span>BI Dashboards</span></div>
-                        <div class="highlight-item"><i class="fas fa-code"></i><span>Python & Machine Learning</span></div>
-                    </div>
-                </div>
-
-                <div class="about-cards reveal">
-                    <div class="info-card">
-                        <h3>Basic Info</h3>
-                        <ul>
-                            <li><span>Name:</span> Akhssassi Sana</li>
-                            <li><span>Role:</span> Data Analyst</li>
-                            <li><span>Location:</span> Rabat</li>
-                            <li><span>Email:</span> sanaakhsassi@gmail.com</li>
-                            <li><span>Languages:</span> English, French</li>
-                        </ul>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>What I Do</h3>
-                        <p>
-                            Data analysis, dashboarding, pipeline automation, ETL, statistical modeling,
-                            Python development, and BI reporting.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <p class="section-text">
+                I am a Data Analyst with strong experience analyzing, processing, and modeling data from multiple sources.
+                I enjoy building efficient data pipelines, designing dashboards, and working with teams to translate
+                business questions into analytical solutions.
+            </p>
+            <p class="section-text">
+                I have worked with Python, SQL, Power BI, Talend, Tableau, Docker and Azure DevOps, on projects involving
+                automation, reporting, and decision support. I am always keen to improve my skills and explore new tools
+                in data and AI.
+            </p>
         </section>
 
-
-        <!-- ================= EXPERIENCE & EDUCATION (UPDATED) ================= -->
+        <!-- ===== EXPERIENCE & EDUCATION ===== -->
         <section id="experience" class="section">
-            <div class="section-header reveal">
-                <h2>Experience & Education</h2>
-                <p>Where I’ve learned and grown</p>
-            </div>
+            <h2 class="section-title">Work Experience & Education</h2>
+            <div class="section-line"></div>
 
-            <div class="timeline-grid">
+            <div class="two-columns">
+                <!-- Experience -->
+                <div class="timeline-column">
+                    <h3 class="column-title">Work Experience</h3>
 
-                <!-- ===== EXPERIENCE ===== -->
-                <div class="timeline-column reveal">
-                    <h3 class="timeline-title">Experience</h3>
-
-                    <!-- 1. Kavaa -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Nov 2022 – Present</span>
-                            <h4>Data Analyst</h4>
-                            <p class="timeline-place">Kavaa Global Services – Rabat</p>
-                            <ul>
-                                <li>Collect, clean & analyze data from multiple sources.</li>
-                                <li>Create Power BI dashboards & automate ETL workflows.</li>
-                                <li>Build & optimize Python data pipelines.</li>
-                                <li>Write SQL queries to extract actionable insights.</li>
-                                <li>Automate requirement management workflows.</li>
-                                <li>Support & train interns on data topics.</li>
-                                <li>Tools: Python, SQL, Docker, Talend, Power BI, Azure DevOps.</li>
-                            </ul>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Nov 2022 – Present</span>
+                                <h4>Data Analyst – Kavaa Global Services (Rabat)</h4>
+                                <ul>
+                                    <li>Collect, clean & analyze data from multiple sources.</li>
+                                    <li>Create Power BI dashboards & automate ETL workflows.</li>
+                                    <li>Build and optimize Python data pipelines.</li>
+                                    <li>Write SQL queries to extract actionable insights.</li>
+                                    <li>Automate requirement management workflows.</li>
+                                    <li>Support and train interns on data topics.</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- 2. ENSA Data Analyst -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Jul 2022 – Nov 2022</span>
-                            <h4>Data Analyst</h4>
-                            <p class="timeline-place">ENSA Khouribga</p>
-                            <p>Designed and implemented ETL pipelines for data collection and transformation.</p>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Jul 2022 – Nov 2022</span>
+                                <h4>Data Analyst – ENSA Khouribga</h4>
+                                <p>Designed and implemented ETL pipelines for data collection and transformation.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- 3. ENSA Data Scientist -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Feb 2022 – Jun 2022</span>
-                            <h4>Data Scientist</h4>
-                            <p class="timeline-place">ENSA Khouribga</p>
-                            <p>GAN project for image-to-image translation using Python & ML.</p>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Feb 2022 – Jun 2022</span>
+                                <h4>Data Scientist – ENSA Khouribga</h4>
+                                <p>GAN project for image-to-image translation using Python and deep learning.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- 4. TACMED -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Mar 2020 – May 2020</span>
-                            <h4>Data Analyst</h4>
-                            <p class="timeline-place">TACMED SYSTEM – Agadir</p>
-                            <p>Data exploration, analysis & visualization using Pandas, Matplotlib & Seaborn.</p>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Mar 2020 – May 2020</span>
+                                <h4>Data Analyst – TACMED SYSTEM (Agadir)</h4>
+                                <p>Data exploration, analysis & visualization using Pandas, Matplotlib and Seaborn.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Education -->
+                <div class="timeline-column">
+                    <h3 class="column-title">Education</h3>
 
-                <!-- ===== EDUCATION ===== -->
-                <div class="timeline-column reveal">
-                    <h3 class="timeline-title">Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2020 – 2022</span>
+                                <h4>Master – Big Data & Aide à la Décision</h4>
+                                <p>ENSA Khouribga</p>
+                            </div>
+                        </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2020 – 2022</span>
-                            <h4>Master – Big Data & Aide à la Décision</h4>
-                            <p class="timeline-place">ENSA Khouribga</p>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2019 – 2020</span>
+                                <h4>Licence Professionnelle – Métiers de l’Informatique</h4>
+                                <p>EST Safi</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017 – 2019</span>
+                                <h4>DUT – Génie Informatique</h4>
+                                <p>EST Agadir</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2016 – 2017</span>
+                                <h4>Baccalauréat – Sciences Physiques</h4>
+                                <p>Lycée Al Joulan – Agadir</p>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2019 – 2020</span>
-                            <h4>Licence Professionnelle – Métiers de l’Informatique</h4>
-                            <p class="timeline-place">EST Safi</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2017 – 2019</span>
-                            <h4>DUT – Génie Informatique</h4>
-                            <p class="timeline-place">EST Agadir</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2016 – 2017</span>
-                            <h4>Baccalauréat – Sciences Physiques</h4>
-                            <p class="timeline-place">Lycée Al Joulan – Agadir</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
 
+        <!-- ===== CERTIFICATIONS ===== -->
+        <section id="certifications" class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="section-line"></div>
 
-        <!-- Projects Section -->
+            <ul class="list">
+                <li>Udemy – Data Analysis Using Python</li>
+                <li>Udemy – Pentaho for ETL</li>
+                <li>IBM – Simplifying Data Pipelines with Kafka</li>
+                <li>Simplilearn – Power BI for Beginners</li>
+                <li>IBM – Python 101 for Data Science</li>
+            </ul>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
         <section id="projects" class="section">
-            <div class="section-header reveal">
-                <h2>Projects</h2>
-                <p>Some things I’ve built & analyzed</p>
-            </div>
+            <h2 class="section-title">Projects</h2>
+            <div class="section-line"></div>
 
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <article class="project-card reveal">
-                    <div class="project-image-wrapper">
-                        <img src="assets/img/project-1.jpg" alt="Project 1" class="project-image" />
-                        <div class="project-overlay">
-                            <a href="https://github.com/yourusername/project1" target="_blank" class="project-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://your-dashboard-link.com" target="_blank" class="project-icon">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Sales Performance Dashboard</h3>
-                        <p>
-                            Power BI dashboard analyzing sales, revenue, and trends across regions with interactive filters.
-                        </p>
-                        <ul class="chip-list small">
-                            <li>Power BI</li>
-                            <li>SQL</li>
-                            <li>Excel</li>
-                        </ul>
-                    </div>
+                <article class="project-card">
+                    <h3>Sales Performance Dashboard</h3>
+                    <p>Interactive Power BI dashboard analyzing sales, revenue and trends across regions with dynamic filters.</p>
+                    <p class="project-tags">Power BI • SQL • Excel</p>
                 </article>
 
-                <!-- Project 2 -->
-                <article class="project-card reveal">
-                    <div class="project-image-wrapper">
-                        <img src="assets/img/project-2.jpg" alt="Project 2" class="project-image" />
-                        <div class="project-overlay">
-                            <a href="https://github.com/yourusername/project2" target="_blank" class="project-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Customer Churn Analysis</h3>
-                        <p>
-                            Explored telecom customer data to understand patterns behind churn and recommend actions.
-                        </p>
-                        <ul class="chip-list small">
-                            <li>Python</li>
-                            <li>Pandas</li>
-                            <li>Matplotlib</li>
-                        </ul>
-                    </div>
+                <article class="project-card">
+                    <h3>Customer Churn Analysis</h3>
+                    <p>Exploratory data analysis and modeling to understand key drivers of churn for a telecom dataset.</p>
+                    <p class="project-tags">Python • Pandas • Machine Learning</p>
                 </article>
 
-                <!-- Project 3 -->
-                <article class="project-card reveal">
-                    <div class="project-image-wrapper">
-                        <img src="assets/img/project-3.jpg" alt="Project 3" class="project-image" />
-                        <div class="project-overlay">
-                            <a href="https://github.com/yourusername/project3" target="_blank" class="project-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Personal Portfolio Website</h3>
-                        <p>
-                            Responsive portfolio (this site) built with HTML, CSS and JavaScript, with animations and smooth scrolling.
-                        </p>
-                        <ul class="chip-list small">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </div>
+                <article class="project-card">
+                    <h3>Requirements Automation Tool</h3>
+                    <p>Python tool to automate the management and tracking of project requirements for data projects.</p>
+                    <p class="project-tags">Python • Automation</p>
                 </article>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- ===== CONTACT ===== -->
         <section id="contact" class="section">
-            <div class="section-header reveal">
-                <h2>Contact</h2>
-                <p>Let’s work together or just say hi 👋</p>
-            </div>
+            <h2 class="section-title">Contact</h2>
+            <div class="section-line"></div>
+
+            <p class="section-text">
+                Interested in working together or discussing a project? Feel free to reach out!
+            </p>
 
             <div class="contact-grid">
-                <div class="contact-info reveal">
-                    <h3>Let’s connect</h3>
-                    <p>
-                        Feel free to contact me for opportunities, collaborations, or if you just want to talk about data, tech, or cool projects.
-                    </p>
-
-                    <ul class="contact-list">
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:you@email.com">you@email.com</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com" target="_blank">GitHub</a>
-                        </li>
-                    </ul>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:sanaakhsassi@gmail.com">sanaakhsassi@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+212697092872">+212 6 97 09 28 72</a></p>
+                    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com" target="_blank">GitHub</a></p>
                 </div>
 
-                <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('This is a static site. You can connect this form to a service like Formspree or EmailJS.');">
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a static site. You can connect this form to Formspree or EmailJS.');">
                     <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name*</label>
-                            <input type="text" id="name" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email*</label>
-                            <input type="email" id="email" required />
-                        </div>
+                        <input type="text" placeholder="Your Name" required />
+                        <input type="email" placeholder="Your Email" required />
                     </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject*</label>
-                        <input type="text" id="subject" required />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message*</label>
-                        <textarea id="message" rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn">
-                        Send Message
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
+                    <input type="text" placeholder="Subject" required />
+                    <textarea rows="4" placeholder="Message" required></textarea>
+                    <button type="submit" class="hero-btn small">Send Message</button>
                 </form>
             </div>
         </section>
-
-        <!-- Footer -->
-        <footer class="main-footer">
-            <p>Designed & coded with <span>♥</span> by You.</p>
-        </footer>
     </main>
 
-    <!-- Scroll to top button -->
-    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
+    <button id="scrollToTop" class="scroll-top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Main JS -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,130 +1,88 @@
-// ====== Year in sidebar footer ======
+// Year in footer
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
 }
 
-// ====== Smooth scroll & active nav ======
+// Smooth scroll for sidebar nav
 const navLinks = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll("section");
-
-function smoothScroll(event) {
-    const href = this.getAttribute("href");
-    if (!href || !href.startsWith("#")) return;
-    event.preventDefault();
-
-    const target = document.querySelector(href);
-    if (target) {
-        const topOffset = 24; // small offset
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - topOffset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth",
-        });
-    }
-}
-
-navLinks.forEach((link) => link.addEventListener("click", smoothScroll));
-
-function highlightNavOnScroll() {
-    let currentId = "";
-
-    sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        const offsetTop = rect.top + window.scrollY;
-        if (window.scrollY + 120 >= offsetTop) {
-            currentId = section.id;
-        }
-    });
-
-    navLinks.forEach((link) => {
-        link.classList.remove("active");
+navLinks.forEach(link => {
+    link.addEventListener("click", e => {
         const href = link.getAttribute("href");
-        if (href === `#${currentId}`) {
-            link.classList.add("active");
+        if (href && href.startsWith("#")) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
         }
     });
+});
+
+// Highlight active nav on scroll
+const sections = document.querySelectorAll("main .section");
+function updateActiveLink() {
+    let currentId = "";
+    sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom >= 120) {
+            currentId = "#" + sec.id;
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === currentId);
+    });
 }
+window.addEventListener("scroll", updateActiveLink);
+updateActiveLink();
 
-window.addEventListener("scroll", highlightNavOnScroll);
-highlightNavOnScroll();
-
-// ====== Scroll to top button ======
+// Scroll-to-top button
 const scrollBtn = document.getElementById("scrollToTop");
-
+window.addEventListener("scroll", () => {
+    if (!scrollBtn) return;
+    if (window.scrollY > 400) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+});
 if (scrollBtn) {
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 400) {
-            scrollBtn.classList.add("show");
-        } else {
-            scrollBtn.classList.remove("show");
-        }
-    });
-
-    scrollBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-}
-
-// ====== Reveal on scroll (IntersectionObserver) ======
-const revealElements = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.2,
-        }
+    scrollBtn.addEventListener("click", () =>
+        window.scrollTo({ top: 0, behavior: "smooth" })
     );
-
-    revealElements.forEach((el) => observer.observe(el));
-} else {
-    // Fallback: just show them
-    revealElements.forEach((el) => el.classList.add("visible"));
 }
 
-// ====== Simple typing effect for hero title ======
-const typingSpan = document.querySelector(".typing");
-if (typingSpan) {
-    const texts = JSON.parse(typingSpan.getAttribute("data-text") || "[]");
+// Typing effect: "Open to work as ..."
+const heroTypingSpan = document.querySelector(".hero-typing");
+if (heroTypingSpan) {
+    const texts = JSON.parse(heroTypingSpan.getAttribute("data-text") || "[]");
     let wordIndex = 0;
     let charIndex = 0;
-    let isDeleting = false;
+    let deleting = false;
 
     function type() {
         const currentWord = texts[wordIndex] || "";
-        const visibleText = currentWord.substring(0, charIndex);
-        typingSpan.textContent = visibleText;
+        const visible = currentWord.substring(0, charIndex);
+        heroTypingSpan.textContent = visible;
 
-        if (!isDeleting && charIndex < currentWord.length) {
+        if (!deleting && charIndex < currentWord.length) {
             charIndex++;
-        } else if (isDeleting && charIndex > 0) {
+        } else if (deleting && charIndex > 0) {
             charIndex--;
         } else {
-            if (!isDeleting) {
-                // pause at end
-                isDeleting = true;
+            if (!deleting) {
+                deleting = true;
                 setTimeout(type, 1000);
                 return;
             } else {
-                isDeleting = false;
+                deleting = false;
                 wordIndex = (wordIndex + 1) % texts.length;
             }
         }
-        const typingSpeed = isDeleting ? 60 : 120;
-        setTimeout(type, typingSpeed);
+        const speed = deleting ? 60 : 120;
+        setTimeout(type, speed);
     }
 
-    if (texts.length > 0) {
-        type();
-    }
+    if (texts.length) type();
 }

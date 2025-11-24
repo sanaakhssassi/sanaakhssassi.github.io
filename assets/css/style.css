@@ -853,10 +853,10 @@ body {
 
 a:link,
 a:visited {
-    color: #B4B6B9 !important;
+    color: #0b6efd !important;
     text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
     color: #0b6efd;
-}
+} */
